@@ -1,0 +1,31 @@
+body {
+  background: #ffff !important;
+}
+
+ul {
+  color: #000;
+}
+
+.ul {
+  width: 500px;
+  background-color: green;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.ul li {
+  background-color: blue;
+  margin: 1rem;
+  border: 1px #ffff solid;
+}
+
+.ul .ul-main {
+  background: green !important;
+  font-weight: 900;
+}
+
+.ul:hover li:not(:last-child) {
+  background: black !important;
+}

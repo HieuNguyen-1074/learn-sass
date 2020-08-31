@@ -1,0 +1,46 @@
+@import './scss/mod.scss';
+@import './scss/valiabale.scss';
+
+@function width($weight ){
+     @return $weight * 100;
+
+}
+
+
+@mixin displayFlex( $justify,$align,$col: true) {
+    display: flex;
+    @if $col {
+        flex-direction: column;
+    }
+    @else{
+      flex-direction: row;
+    }
+    justify-content: $justify;
+    align-items: $align;
+    
+}
+
+
+
+
+.ul {
+    width: 500px ;
+    background-color: map-get($bg-colr, "green");
+
+
+
+    @include displayFlex(start, flex-start , false);
+    li{
+        background-color: map-get($bg-colr, "blue" );
+        margin: 1rem;
+        border: 1px $color-with solid;
+
+    }
+     #{&}-main{
+     background: map-get($bg-colr, "green" ) !important;
+     font-weight: width(9);
+    }
+    &:hover li:not(:last-child){
+        background: map-get($bg-colr, "black" ) !important;
+    }
+}
